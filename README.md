@@ -1,53 +1,24 @@
-# Jenkins CI/CD Demo Project
+# Jenkins
 
-This is a simple Flask application that demonstrates CI/CD using Jenkins, Docker, and Docker Compose.
+Jenkins is an open-source automation server that is used to automate the build, test, and deployment of software. It is a powerful tool for CI/CD pipelines.
 
-## Project Structure
+## Installation
 
-- `app.py`: Main Flask application
-- `test_app.py`: Unit tests for the application
-- `requirements.txt`: Python dependencies
-- `Dockerfile`: Container definition for the Flask app
-- `docker-compose.yml`: Orchestration for both the Flask app and Jenkins
-- `Jenkinsfile`: Pipeline definition for CI/CD
-- `jenkins.yaml`: Jenkins configuration file
-
-## Prerequisites
-
-- Docker
-- Docker Compose
-
-## Getting Started
-
-1. Start the services:
 ```bash
 docker-compose up -d
 ```
 
-2. Access the applications:
-   - Flask app: http://localhost:5000
-   - Jenkins: http://localhost:8080
-     - Username: admin
-     - Password: admin
+## What I learnt
 
-## Jenkins Pipeline
+- What is Jenkins?
+- Why jenkins is still relevant?
+- What make jenkins preferred over other CI/CD tools?
+- How to define pipeline as code in Jenkins
+---
 
-The pipeline consists of three stages:
-1. Build: Builds the Docker container
-2. Test: Runs the Python tests with coverage
-3. Deploy: Deploys the application using Docker Compose
+## Metadata
 
-## Development
-
-To run the application locally without Docker:
-```bash
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-python app.py
-```
-
-To run tests:
-```bash
-pytest
-``` 
+| Key | Value |
+|-----|--------|
+| # of 1 Hour of Improvement | 48 |
+| Learnt at | 2025-04-02 |
