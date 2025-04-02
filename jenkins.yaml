@@ -1,0 +1,39 @@
+jenkins:
+  systemMessage: "Jenkins configured automatically by Jenkins Configuration as Code plugin\n\n"
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: "admin"
+          password: "admin"
+  authorizationStrategy:
+    globalMatrix:
+      permissions:
+        - "Overall/Administer:admin"
+        - "Overall/Read:authenticated"
+  tools:
+    git:
+      installations:
+        - name: "Default"
+          home: "git"
+    dockerTool:
+      installations:
+        - name: "Latest"
+          dockerToolName: "docker-latest"
+  plugins:
+    - id: "docker-workflow"
+      version: "1.29"
+    - id: "docker-plugin"
+      version: "1.2.10"
+    - id: "pipeline-github"
+      version: "2.7"
+    - id: "pipeline-stage-view"
+      version: "2.19"
+    - id: "blueocean"
+      version: "1.27.4"
+    - id: "configuration-as-code"
+      version: "1.19"
+    - id: "git"
+      version: "5.0.0"
+    - id: "workflow-aggregator"
+      version: "2.7" 
